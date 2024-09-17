@@ -1,0 +1,250 @@
+{
+  "Settings": {
+    "Input": "alien-1.2.2.jar",
+    "Output": "alien-1.2.2-obf.jar",
+    "Libraries": [
+      "./library/"
+    ],
+    "ExclusionAnnotation": [
+      "org/kryptondevelopment/obf/DoNotObfuscate"
+    ],
+    "Exclusions": [],
+    "MixinPackage": [
+      "dev/luminous/asm/"
+    ],
+    "DumpMappings": true,
+    "MappingsOutput": "mappings.json",
+    "ParallelProcessing": true,
+    "UseComputeMax": false,
+    "CustomDictionary": [],
+    "DictionaryStartIndex": 0,
+    "CorruptOutput": false,
+    "FileRemovePrefix": [],
+    "FileRemoveSuffix": [],
+    "FakeDirectory": false
+  },
+  "Shrinking": {
+    "Enabled": true,
+    "OptimizeEnum": true,
+    "RemoveDeadCode": true,
+    "RemoveInnerClass": true,
+    "RemoveUnusedLabel": true,
+    "RemoveNOP": false,
+    "SourceDebugInfo": true,
+    "RenameSourceDebug": false,
+    "SourceNames": [
+      "Krypton.java",
+      "Krypton.kt",
+      "Krypton.py",
+      "Krypton.hpp",
+      "Krypton.cpp"
+    ],
+    "Exclusion": []
+  },
+  "KotlinOptimizer": {
+    "Enabled": false,
+    "RemoveMetadata": true,
+    "RemoveIntrinsics": true,
+    "IntrinsicsRemoval": [
+      "checkExpressionValueIsNotNull",
+      "checkNotNullExpressionValue",
+      "checkReturnedValueIsNotNull",
+      "checkFieldIsNotNull",
+      "checkParameterIsNotNull",
+      "checkNotNullParameter"
+    ],
+    "ReplaceLdc": true,
+    "IntrinsicsExclusions": [],
+    "MetadataExclusions": []
+  },
+  "TrashClass": {
+    "Enabled": false,
+    "Package": "dev/luminous/",
+    "Prefix": "Trash",
+    "Count": 10,
+    "ClonedSuffix": "-cloned",
+    "ClonedCount": 2,
+    "ClonedRemoveAnnotations": true,
+    "ClonedExclusion": []
+  },
+  "StringEncrypt": {
+    "Enabled": true,
+    "Intensity": 1,
+    "Method": "Classic",
+    "Exclusions": []
+  },
+  "LocalVariableRename": {
+    "Enabled": true,
+    "Dictionary": "Alphabet",
+    "ThisReference": false
+  },
+  "ControlflowFlattening": {
+    "Enabled": false,
+    "FlattenPercentage": 80,
+    "Random Label": true,
+    "Unconditional": true,
+    "Conditional": true,
+    "TryCatch": true,
+    "OptimizeSSA": false,
+    "Exclusion": [],
+    "ExcludeMethod": []
+  },
+  "NumberEncrypt": {
+    "Enabled": true,
+    "Intensity": 1,
+    "Exclusion": []
+  },
+  "ArithmeticEncrypt": {
+    "Enabled": false,
+    "Intensity": 1,
+    "Exclusion": []
+  },
+  "FlattenFlow": {
+    "Enabled": false,
+    "UnConditional Flatten": true,
+    "Conditional Flatten": true,
+    "TryCatch Flatten": true,
+    "Immediate Flatten": true,
+    "Optimize": true
+  },
+  "ChaosControlflowJump": {
+    "Enabled": true,
+    "MaxInstructions": 5000,
+    "SwapField": true,
+    "ReplaceGoto": true,
+    "GotoIntensity": 3,
+    "ReplaceIf": true,
+    "IfIntensity": 2,
+    "ReplaceReturn": true,
+    "PackedReturn": true,
+    "JunkCode": true,
+    "ExpandedJunkCode": true,
+    "NonExcludedWeight": 70,
+    "InputJarWeight": 70,
+    "MaxExtraJunkCode": 2,
+    "JunkLookUpSwitch": false,
+    "SwitchGenerateChance": 0,
+    "MaxSwitchCases": 5,
+    "NumberEncrypt": false,
+    "EncryptExclusion": [],
+    "Exclusion": [],
+    "ExcludedMethod": [
+      "dev/luminous/api/utils/world/BlockPosX.\u003cinit\u003e(DDDZ)V"
+    ]
+  },
+  "Scramble": {
+    "Enabled": true,
+    "Intensity": 1,
+    "RandomName": false,
+    "GenerateOuterClass": true,
+    "ScrambleField": true,
+    "GetStatic": true,
+    "SetStatic": true,
+    "GetValue": true,
+    "SetField": true,
+    "ScrambleMethod": true,
+    "RandomCall": false,
+    "Exclusion": [],
+    "ExcludedFieldName": [],
+    "ExcludedMethodName": []
+  },
+  "SyntheticBridge": {
+    "Enabled": false,
+    "Exclusion": []
+  },
+  "MethodRename": {
+    "Enabled": true,
+    "Mode": "Heavy",
+    "Dictionary": "Blank",
+    "HeavyOverloads": false,
+    "RandomKeywordPrefix": true,
+    "Prefix": "__protected by KryptonObfuscator__",
+    "Exclusion": [
+      "dev/luminous/Alien$1"
+    ],
+    "ExcludedName": []
+  },
+  "FieldRename": {
+    "Enabled": true,
+    "Dictionary": "Blank",
+    "RandomKeywordPrefix": true,
+    "Prefix": "_protected by KryptonObfuscator_",
+    "Shuffled": true,
+    "Exclusion": [],
+    "ExcludedName": [
+      "INSTANCE",
+      "Companion"
+    ],
+    "MixinDictionary": "Alphabet",
+    "MixinPrefix": "_protected by KryptonObfuscator_"
+  },
+  "ClassRename": {
+    "Enabled": true,
+    "Dictionary": "Chinese",
+    "Parent": "dev/luminous/",
+    "Prefix": "_protected_by_KryptonObfuscator_",
+    "Shuffled": true,
+    "CorruptedName": true,
+    "CorruptedNameExclusions": [],
+    "Exclusion": [],
+    "MixinDictionary": "Alphabet",
+    "TargetMixinPackage": "dev/luminous/asm/",
+    "MixinFile": "alien.mixins.json",
+    "RefmapFile": "alien-refmap.json"
+  },
+  "InvokeDynamic": {
+    "Enabled": true,
+    "ReplacePercentage": 60,
+    "Reobfuscate": true,
+    "IndependentBSM": false,
+    "ScrambleBSM": false,
+    "Exclusion": [],
+    "ExcludedMethod": [
+      "org/kryptondevelopment/Example.method"
+    ],
+    "MustIndyClasses": [
+      "dev/luminous/Alien"
+    ]
+  },
+  "Watermark": {
+    "Enabled": true,
+    "WatermarkMessage": [
+      "PROTECTED BY KRYPTON KLASS MASTER",
+      "PROTECTED BY SPARTAN EVERETT",
+      "逸一时,误一世,逸久逸久罢已龄",
+      "忘了是这样的，忘了只需要忘了就行，忘了需要考虑的就多了。",
+      "忘了，但是忘了是由忘了自主研发的忘了。忘了发生在一个被称作忘了的忘了，在这里被忘了选中的人将被授予忘了，引导忘了之力。",
+      "你将扮演一位名为忘了的忘了，在忘了中邂逅忘了，在忘了中邂逅忘了，和忘了一起击败忘了，找回失散的忘了——同时，"
+    ],
+    "FieldMark": true,
+    "MethodMark": true,
+    "AnnotationMark": false,
+    "AnnotationName": "KryptonMetadata",
+    "MemberAnnotations": 2,
+    "Exclusion": []
+  },
+  "ShuffleMembers": {
+    "Enabled": false,
+    "Methods": true,
+    "Fields": true,
+    "Annotations": true,
+    "Exceptions": true,
+    "Exclusion": []
+  },
+  "NativeMethod": {
+    "Enabled": false,
+    "NativeMethodAnnotation": "org/kryptondevelopment/obf/NativeMethod",
+    "NativeClassAnnotation": "org/kryptondevelopment/obf/NativeClass"
+  },
+  "PostProcess": {
+    "Enabled": true,
+    "Manifest": true,
+    "Plugin YML": true,
+    "Bungee YML": true,
+    "Fabric JSON": true,
+    "ManifestPrefix": [
+      "Main-Class:"
+    ],
+    "Transform Resources": []
+  }
+}
